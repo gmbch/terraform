@@ -7,6 +7,8 @@ resource "aws_ecs_cluster" "cron-jobs" {
 }
 
 module "cron_job" {
+  source = "git::https://github.com/gmbch/terraform.git"
+
   ecr_repo_name                  ="force-overview-dashboards"
 
   image_tag                      = "latest"
